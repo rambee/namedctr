@@ -1,0 +1,35 @@
+/*
+       Name: styles.css
+Description: CSS file for styling the app page.
+     Author: Ramprasad Beerappa <r.beerappa@stud.uis.no>
+ Created on: 20.05.2018
+ Amended on: 22.05.2018
+*/
+
+/* Page body style*/
+.body-align {
+    border: 3pt solid black; 
+    padding: 10px; 
+    max-width: 520px; 
+    margin: auto; 
+    margin-top: 50px; 
+    vertical-align: middle; 
+    padding-left: 35px"
+}
+
+/* Table style */
+table {
+    font-family: arial, sans-serif;
+    width: 300%;
+}
+
+/* Table cell and header style*/
+td, th {
+    text-align: center;
+    padding: 8px;
+}
+
+/* Table alternate rows style*/
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

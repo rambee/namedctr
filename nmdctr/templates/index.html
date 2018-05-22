@@ -1,0 +1,78 @@
+<!--
+       Name: index.html
+Description: Home page for the app.
+     Author: Ramprasad Beerappa <r.beerappa@stud.uis.no>
+ Created on: 20.05.2018
+ Amended on: 22.05.2018
+-->
+
+{% extends "base_generic.html" %}
+{% block content %}
+
+<h1>Named Counter App</h1>
+
+<p>Welcome to <em>Named Counter App</em>, a Django based web app.</p>
+
+<br>
+
+<h2 style="text-align: center">Counter App</h2>
+
+<br>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div>
+        {{ form.as_table }}
+        {% load static %}
+        <button type="Submit" name="add"><img src="{% static 'images/plus.png' %}" height="20" width="20"/></button>
+    </div>
+</form>
+
+<br>
+
+{% if ctr.items %}
+
+<p><b>List of available named counter(s)</b></p>
+
+<form method="post">
+    <table class="table">
+        <tr>
+            <th>Delete</th>
+            <th>Name</th>
+            <th style="text-align: right">Decrement</th>
+            <th>Value</th>
+            <th>Increment</th>
+        </tr>
+
+        {% csrf_token %}
+        {% for key, value in ctr.items %}
+        
+        <tr>
+            <td>
+                <button type="Submit" name="delete" value="{{key}}"><img src="{% static 'images/delete.png' %}" height="12" width="12"/></button>
+            </td>
+            <td style="width: 300px">
+                {{ key }}
+            </td>
+            <td style="text-align: right">
+                <button type="Submit" name="decrement" value="{{key}}"><img src="{% static 'images/minus.png' %}" height="12" width="12"/></button>
+            </td>
+            <td>
+                {{ value }}
+            </td>
+            <td style="text-align: left">
+                <button type="Submit" name="increment" value="{{key}}"><img src="{% static 'images/plus.png' %}" height="12" width="12"/></button>
+            </td>
+        </tr>
+        
+        {% endfor %}
+
+    </table>
+</form>
+
+<p><b>Total named counter(s) value</b>: {{ nmd_ctr_total }}</p>
+<br>
+
+{% endif %}
+{% endblock %}
