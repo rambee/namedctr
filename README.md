@@ -3,6 +3,7 @@ Named counter app, a Django based web app.
 
 # Screenshot
 
+[![Screenshot](https://github.com/rambee/namedctr/blob/master/named_ctr_app_screenshot.png)]
 
 # Installing the prerequisites (Development)
 
