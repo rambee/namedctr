@@ -5,6 +5,14 @@ Named counter app, a Django based web app.
 
 ![Screenshot](https://github.com/rambee/namedctr/blob/master/named_ctr_app_screenshot.png)
 
+# Functionalities
+
+* Create or add a new named counter
+* Decrement a named counter
+* Increment a named counter
+* Delete a named counter
+* Presents the total value of the available named counter(s)
+
 # Installing the prerequisites (Development)
 
 ## Python > 3
