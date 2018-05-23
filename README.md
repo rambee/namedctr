@@ -5,7 +5,7 @@ Named counter app, a Django based web app.
 
 * Initial load of home page is via GET request and all the operations are via POST request.
 * Counter(s) list is sorted based on the name.
-* It is assumed that the counter(s) value should contain only natural numbers.
+* It is assumed that the counter(s) value should contain only natural numbers. Therefore, initial value of a counter is set to zero.
 
 # Screenshot
 
