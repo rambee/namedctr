@@ -33,5 +33,5 @@ $ cd namedctr
 
 $ python manage.py runserver
 
-Type http://127.0.0.1/8000/ in the web browser
+Type http://127.0.0.1:8000/ in the web browser
 
