@@ -1,6 +1,12 @@
 # namedctr
 Named counter app, a Django based web app.
 
+# Description
+
+* Initial load of home page is via GET request and all the operations are via POST request.
+* Counter(s) list is sorted based on name.
+* It is assumed that the counter(s) value should contain only natural numbers.
+
 # Screenshot
 
 ![Screenshot](https://github.com/rambee/namedctr/blob/master/named_ctr_app_screenshot.png)
