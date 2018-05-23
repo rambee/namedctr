@@ -3,7 +3,7 @@
 # Description: Definition of the app view.
 #      Author: Ramprasad Beerappa <r.beerappa@stud.uis.no>
 #  Created on: 20.05.2018
-#  Amended on: 22.05.2018
+#  Amended on: 23.05.2018
 #############################################################
 
 from django.shortcuts import render
@@ -22,6 +22,7 @@ def index(request):
     """
 
     home_page = 'index.html'
+    global counter_dict
 
     if request.method == 'POST':
         # Handle new named counter action
@@ -31,6 +32,7 @@ def index(request):
                 ctr_name = form.cleaned_data['new_ctr_name']
                 if not form.validate_ctr_name():
                     counter_dict[ctr_name] = 0
+                    counter_dict = {k: v for k, v in sorted(counter_dict.items())}
 
         # Handle decrement a named counter action
         elif 'decrement' in request.POST:
