@@ -35,3 +35,7 @@ $ python manage.py runserver
 
 Type http://127.0.0.1:8000/ in the web browser
 
+# TODO
+
+* Handle form resubmission.
+* Pagination for the list of available counters if the list grows beyond the page.
