@@ -25,7 +25,7 @@ SECRET_KEY = '9*j6sj#e8r!2f!25gv%_db3m7k(o^457fo3ov4i-h&p@)2(v_q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'testserver']  # Added to run unit/functional tests
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_nose',                  # Added to run coverage tests
     'nmdctr.apps.NmdctrConfig',     # Add named counter app to installed apps list
 ]
 
@@ -119,3 +120,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Use nose to run all tests
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+# Tell nose to measure coverage on the 'nmdctr' apps
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=nmdctr',
+]
+
