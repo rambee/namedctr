@@ -1,3 +1,11 @@
+#############################################################
+#        Name: tests.py
+# Description: Definition of the test cases for the app.
+#      Author: Ramprasad Beerappa <r.beerappa@stud.uis.no>
+#  Created on: 22.05.2018
+#  Amended on: 23.05.2018
+#############################################################
+
 from django.test import Client
 import django
 from django.test import TestCase
