@@ -40,7 +40,7 @@ $ cd namedctr
 
 $ python manage.py runserver
 
-Type http://127.0.0.1:8000/ in the web browser
+Open http://127.0.0.1:8000/ in the web browser
 
 # Testing - Unit, Functional, and Coverage
 
